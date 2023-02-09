@@ -1,0 +1,48 @@
+main.right {
+
+}
+
+main.right > h1 {
+    text-align: center;
+    border-bottom: 0.02rem solid black;
+    padding: 10px;
+}
+
+main.right section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+article.card {
+    min-width: 400px;
+    max-width: 550px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    padding: 10px;
+}
+
+article.card .card__header {
+    text-align: center;
+}
+article.card .card__header__div {
+
+}
+article.card .card__header__div__img {
+    border-radius: 50%;
+}
+article.card .card__header__name {
+    font-size: 1.6rem;
+}
+
+article.card .card__infos__line {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+
+}

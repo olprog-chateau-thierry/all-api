@@ -1,10 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import './main.css'
+import Header from "./Header.jsx";
+import RandomApp from "./random-user/RandomApp.jsx";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <React.StrictMode>
+        <Header/>
+        <div className="main">
+            <RandomApp/>
+        </div>
+    </React.StrictMode>,
 )
