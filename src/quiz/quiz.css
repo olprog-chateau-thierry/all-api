@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+#root {
+    background: #fff url("/bg.png") center center no-repeat fixed;
+    background-size: cover;
+    font-family: 'Manrope', sans-serif;
+}
+
+.quiz {
+    text-align: center;
+    min-height: 100vh;
+    backdrop-filter: blur(5px);
+}
+
+.quiz > h1 {
+    color: #777777;
+    font-size: 4rem;
+    padding: 30px;
+}
+
+.quiz__content__question,
+.quiz__content__prop div,
+.quiz__content__checking {
+    font-size: 1.2rem;
+    color: var(--color-white);
+    backdrop-filter: blur(50px);
+}
+
+.quiz__content__question,
+.quiz__content__prop div {
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.quiz__content__question {
+    width: 80%;
+    min-width: 350px;
+    max-width: 900px;
+    padding: 50px 10px;
+    margin: 0px auto 50px;
+}
+
+.quiz__content__prop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px 20px;
+    width: 80%;
+    min-width: 350px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.quiz__content__prop div,
+.quiz__content__checking {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out;
+}
+
+.quiz__content__prop div {
+    width: 100%;
+}
+
+
+.quiz__content__prop div.active {
+    background-color: rgba(255, 255, 255, 0.60);
+    color: var(--color-black)
+}
+
+.quiz__content__prop div:hover {
+    background-color: rgba(0, 0, 0, 0.60);
+}
+
+.quiz__content__prop div.active:hover {
+    color: var(--color-white)
+}
+
+.quiz__content__prop div.active.ok,
+.quiz__content__prop div.resp-ok {
+    background-color: rgba(0, 255, 0, 0.35);
+    color: var(--color-white)
+}
+
+.quiz__content__prop div.active.ko {
+    background-color: rgba(255, 0, 0, 0.35);
+    color: var(--color-white)
+}
+
+.quiz__content__checking {
+    background-color: rgba(0, 67, 147, 0.35);
+    width: 80%;
+    min-width: 350px;
+    max-width: 900px;
+    margin: 50px auto;
+    transition: transform 500ms ease-in-out,
+    opacity 500ms ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+}
+
+.quiz__content__checking.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
